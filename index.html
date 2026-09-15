@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>2048</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>2048</h1>
+      <div class="scores">
+        <div class="score-box"><span>Pontos</span><strong id="score">0</strong><em id="gain"></em></div>
+        <div class="score-box"><span>Recorde</span><strong id="best">0</strong></div>
+      </div>
+    </header>
+
+    <p class="intro">Junte os números até chegar ao <strong>2048</strong>. Setas, WASD ou swipe.</p>
+
+    <div class="actions">
+      <button id="undo" title="Desfazer (U)">↶ Desfazer</button>
+      <button id="new" title="Novo jogo (N)">Novo jogo</button>
+    </div>
+
+    <section class="board" id="board">
+      <div class="cells" id="cells"></div>
+      <div class="tiles" id="tiles"></div>
+      <div id="overlay" class="overlay hidden">
+        <h2 id="overlay-title"></h2>
+        <div class="overlay-actions">
+          <button id="keep" class="hidden">Continuar</button>
+          <button id="retry">Jogar de novo</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
